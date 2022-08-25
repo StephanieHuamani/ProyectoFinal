@@ -77,13 +77,7 @@ class Contacto{
   }
 }
 
-let contacto = []
-
-if(localStorage.getItem("contacto")) {
-  contacto = JSON.parse(localStorage.getItem("contacto"))
-} else {
-  localStorage.setItem("contacto", JSON.stringify(contacto))    
-}
+const contacto = JSON.parse(localStorage.getItem("contacto")) ?? []
 
 const formulario1 = document.getElementById("contacto")
 const nombre = document.getElementById("nombre")
