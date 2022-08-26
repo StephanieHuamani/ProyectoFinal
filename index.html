@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
   <link rel="stylesheet" href="style/style.css">
   <title>Tienda de Blizzard</title>
@@ -14,8 +15,8 @@
   <ol class="breadcrumb d-flex justify-content-end">
     <li class="breadcrumb-item"><a href="#">Iniciar Sesion</a></li>
     <li class="breadcrumb-item"><a href="#">Carrito
-      <img src="https://img.icons8.com/small/20/FFFFFF/shopping-bag.png"/>
-    </a></li>
+        <img src="https://img.icons8.com/small/20/FFFFFF/shopping-bag.png" />
+      </a></li>
   </ol>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
@@ -40,7 +41,7 @@
         </ul>
         <form class="d-flex col-3">
           <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
-          <button class="btn" type="submit">Buscar</button>
+          <button class="btn" type="submit" id="carrito" data-bs-toggle="modal" data-bs-target="#exampleModal">Carrito</button>
         </form>
       </div>
 
@@ -84,11 +85,14 @@
 
     <section>
       <h2>PROXIMAMENTE</h2>
+      <p class="p">Juegos disponibles a partir del 9/09/2022. Después de esa fecha aumenta el precio a </p>
+      <div id="juegosProximos" class="row"></div>
     </section>
 
     <section>
       <h2>SUSCRIBITE PARA RECIBIR NUESTRAS NOVEDADES</h2>
-      <p class="p">Si queres ser el primero en enterarte de nuestras novedades y ofertas, ingresa tu email en el casillero de
+      <p class="p">Si queres ser el primero en enterarte de nuestras novedades y ofertas, ingresa tu email en el
+        casillero de
         abajo</p>
       <form action="" id="form">
         <input type="email" id="emailForm" placeholder="Ingrese su email">
@@ -97,44 +101,66 @@
     </section>
 
 
-<section>
-  <h2>Hablemos un rato</h2>
-  <div class="container-fluid">
-                <form action="#" id="contacto">
-                    <label for="nombre"> Nombre:
-                        <div class="input-group">
-                            <input type="text" aria-label="name" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
-                        </div>
-                    </label>
-                    <label for="asunto">Asunto:
-                      <div class="input-group">
-                          <input type="text" aria-label="asunto" class="form-control" placeholder="Asunto" name="asunto" id="asunto">
-                      </div>
-                  </label>
-                    <div class="mb-3 col-3">
-                        <label for="formGroupExampleInput" class="form-label pForm"> Email de contacto:</label>
-                        <input type="text" class="form-control" id="correo" name="correo"
-                            placeholder="Nombre@example.com">
-                    </div>
-                    <div class="mb-3 col-4">
-                        <label for="exampleFormControlTextarea1" class="form-label pForm"> Comentarios: </label>
-                        <input type="text" aria-label="omentario" class="form-control" placeholder="¿En que podemos ayudarlo?" name="comentario" id="comentario" rows="2">
-                    </div>
-                        <button type="submit" class="btn">Enviar</button>
-                </form>
-              </div>
-              </section>
-
+    <section>
+      <h2>CONTACTO</h2>
+      <p class="p">Si tenes alguna duda,sugerencia o incoveniente, por favor completa este formulario y nos comunicaremos con vos a la brevedad.</p>
+      <div class="container-fluid contacto">
+        <form action="#" id="contacto">
+          <label for="nombre"> Nombre:
+            <div class="input-group">
+              <input type="text" aria-label="name" class="form-control" placeholder="Nombre" name="nombre" id="nombre">
+            </div>
+          </label>
+          <label for="asunto">Asunto:
+            <div class="input-group">
+              <input type="text" aria-label="asunto" class="form-control" placeholder="Asunto" name="asunto"
+                id="asunto">
+            </div>
+          </label>
+          <div class="mb-3 col-3">
+            <label for="formGroupExampleInput" class="form-label pForm"> Email de contacto:</label>
+            <input type="text" class="form-control" id="correo" name="correo" placeholder="Nombre@example.com">
+          </div>
+          <div class="mb-3 col-4">
+            <label for="exampleFormControlTextarea1" class="form-label pForm"> Comentarios: </label>
+            <input type="text" aria-label="omentario" class="form-control" placeholder="¿En que podemos ayudarlo?"
+              name="comentario" id="comentario" rows="2">
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
     <footer>
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Blizzard_Entertainment_Logo.svg" alt="">
-
       <p class="pFooter">Empleo | Información | Contacto | Mapa del sitio</p>
     </footer>
   </main>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="modal">
+
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button>
+        <button type="button" class="btn btn-primary">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
   <script src="script.js"></script>
 </body>
 

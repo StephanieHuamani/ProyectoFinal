@@ -1,0 +1,52 @@
+[
+    {
+        "id": 9,
+        "nombre": "Warcraft Arclight Rumble",
+        "categoria": "ACCIÓN ESTRATÉGICA PARA MOVILES",
+        "franquicia": "warcraft",
+        "precio": 1,
+        "stock": 70,
+        "plataforma": "movil",
+        "img": "./img/warcraftRumble.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "World of Warcraft: Dragonflight",
+        "categoria": "EXPANSIÓN",
+        "franquicia": "warcraft",
+        "precio": 1,
+        "stock": 70,
+        "plataforma": "PC",
+        "img": "./img/warcraftDragonFlight.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Wrath of the Lich King Classic",
+        "categoria": "EXPANSIÓN",
+        "franquicia": "warcraft",
+        "precio": 1,
+        "stock": 70,
+        "plataforma": "PC",
+        "img": "./img/warcraftLich.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Overwatch 2",
+        "categoria": "ACCIÓN POR EQUIPOS",
+        "franquicia": "Overwatch",
+        "precio": 1,
+        "stock": 3,
+        "plataforma": "PC",
+        "img": "./img/overwatch2.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Diablo IV",
+        "categoria": "ROL Y ACCIÓN",
+        "franquicia": "diablo",
+        "precio": 1,
+        "stock": 70,
+        "plataforma": "Consola",
+        "img": "./img/diabloiv.jpg"
+    }
+]
